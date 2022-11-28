@@ -1,0 +1,14 @@
+diff --git a/trunk/src/VirtualBox-6.1.40/src/VBox/Runtime/common/zip/zip.cpp b/trunk/src/VirtualBox-6.1.40/src/VBox/Runtime/common/zip/zip.cpp
+index 680925b..4d9ae10 100644
+--- a/src/VBox/Runtime/common/zip/zip.cpp
++++ b/src/VBox/Runtime/common/zip/zip.cpp
+@@ -51,7 +51,9 @@
+ # include <zlib.h>
+ #endif
+ #ifdef RTZIP_USE_LZF
++extern "C" {
+ # include <lzf.h>
++}
+ # include <iprt/crc.h>
+ #endif
+ #ifdef RTZIP_USE_LZJB
